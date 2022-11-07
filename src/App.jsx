@@ -30,10 +30,11 @@ function ModalNavBar() {
               <Menu.Item>
                 {({ active }) => (
                   <button
+                    disabled
                     className={`${active ? 'bg-sky-700 text-white' : 'text-gray-900'
                       } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    This Menu is Comming...
+                    Is Comming...
                   </button>
                 )}
               </Menu.Item>
@@ -51,7 +52,7 @@ function NavBar() {
       <nav className='flex justify-between w-full max-w-7xl mx-auto'>
         <h1>My Tasks</h1>
         <ul className='flex gap-3 items-center justify-center'>
-          <li><AiFillBell className='h-5 w-5' /></li>
+          {/* <li><AiFillBell className='h-5 w-5' /></li> */}
           <li className='flex'>
             <AiOutlinePlusCircle className='h-5 w-5' />
           </li>
