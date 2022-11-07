@@ -152,7 +152,7 @@ export default function TasksList() {
                       </div>
                     )}
                   </Draggable>
-                )) : <p>NoTask</p>}
+                )) : <p>No Tasks</p>}
                 {droppableProvided.placeholder}
               </div>
             )}
