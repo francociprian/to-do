@@ -46,8 +46,8 @@ export default function TaskModal({ note, onChange, onSave, onClose, visible }) 
                 <label htmlFor='color'>Color: </label>
                 <input type="color" id='color' value={color} onChange={handleColor} className='appearance-none border-none bg-transparent input-color'  />
               </div>
-              <div className='flex flex-col justify-start gap-4'>
-                <label htmlFor="title">Title</label>
+              <div className='flex flex-col justify-start mt-2'>
+                <label htmlFor="title">Title:</label>
                 <input
                   required
                   type="text"
@@ -57,8 +57,8 @@ export default function TaskModal({ note, onChange, onSave, onClose, visible }) 
                   className='border border-black px-2 rounded-md'
                 />
               </div>
-              <div className='flex flex-col justify-start gap-4 mt-2'>
-                <label htmlFor="content">Content</label>
+              <div className='flex flex-col justify-start mt-2'>
+                <label htmlFor="content">Content:</label>
                 <textarea
                   required
                   id="content"
@@ -68,30 +68,8 @@ export default function TaskModal({ note, onChange, onSave, onClose, visible }) 
                   className='border border-black rounded-md p-2'
                 ></textarea>
               </div>
-              {/* <div className='flex gap-2'>
-                <input
-                    required
-                    type='checkbox'
-                    id="expirationCheckbox"
-                    className='border border-black px-2 rounded-md'
-                    onClick={() => setExpiration(!expiration)}
-                />
-                <label htmlFor="expirationCheckbox">Expiration</label>
-              </div>
-              {expiration ? (
-                <div className='flex flex-col justify-start gap-4'>
-                  <label htmlFor="expiration"></label>
-                  <input
-                    required
-                    type='date'
-                    id="expiration"
-                    onChange={(event) => onChange('expiration', event.target.value)}
-                    className='border border-black px-2 rounded-md'
-                  />
-                </div>
-              ) : null} */}
-              <div className='flex flex-col justify-start gap-4'>
-                  <label htmlFor="expiration"></label>
+              <div className='flex flex-col justify-start mt-2'>
+                  <label htmlFor="expiration">Expiration Date:</label>
                   <input
                     required
                     type='date'
