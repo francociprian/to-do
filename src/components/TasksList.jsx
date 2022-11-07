@@ -99,16 +99,21 @@ export default function TasksList() {
   }, [notes]);
 
 
+  const [enter , setEnter] = useState(false);
   return (
     <>
       <div className='px-4 flex justify-between items-center'>
         <DateToDay />
         <button
-          className='border group flex w-[10rem] items-center rounded-md px-2 py-1 text-sm hover:border-sky-900'
+          className='border group flex w-[10rem] items-center rounded-md px-2 py-1 text-sm'
           onClick={() => setDraft(true)}
+          onPointerEnter={() => setEnter(true)}
+          onPointerLeave={() => setEnter(false)}
         >
-          <AiOutlinePlusCircle className="mr-2 h-4 w-4" />
-          Add Task
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={enter ? 'w-[1.15rem] h-[1.15rem] mr-2 bg-sky-700 rounded-full text-white' : "w-[1.15rem] h-[1.15rem] mr-2"} >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+          </svg>
+          <span>Add Task</span> 
         </button>
       </div>
       {draft && (
