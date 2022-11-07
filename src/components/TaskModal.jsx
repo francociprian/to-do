@@ -49,6 +49,7 @@ export default function TaskModal({ note, onChange, onSave, onClose, visible }) 
               <div className='flex flex-col justify-start mt-2'>
                 <label htmlFor="title">Title:</label>
                 <input
+                  autoFocus
                   required
                   type="text"
                   id="title"
