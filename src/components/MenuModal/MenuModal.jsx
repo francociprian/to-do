@@ -31,7 +31,7 @@ export default function MenuModal({ note, onEdit, onArchive, onDelete }) {
                 {({ active }) => (
                   <button
                     onClick={onEdit}
-                    className={`${active ? 'bg-sky-700 text-white' : 'text-gray-900'
+                    className={`${active ? 'bg-[#15803d] text-white' : 'text-gray-900'
                       } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     {active ? (
@@ -79,7 +79,7 @@ export default function MenuModal({ note, onEdit, onArchive, onDelete }) {
                 {({ active }) => (
                   <button
                     onClick={onDelete}
-                    className={`${active ? 'bg-sky-700 text-white' : 'text-gray-900'
+                    className={`${active ? 'bg-[#d90301] text-white' : 'text-gray-900'
                       } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     {active ? (
@@ -116,7 +116,7 @@ function EditInactiveIcon(props) {
       <path
         d="M4 13V16H7L16 7L13 4L4 13Z"
         fill="#FFF"
-        stroke="#579CD8"
+        stroke="#22c55e"
         strokeWidth="2"
       />
     </svg>
@@ -133,8 +133,8 @@ function EditActiveIcon(props) {
     >
       <path
         d="M4 13V16H7L16 7L13 4L4 13Z"
-        fill="#0369A1"
-        stroke="#92D2FF"
+        fill="#15803d"
+        stroke="#22c55e"
         strokeWidth="2"
       />
     </svg>
@@ -217,11 +217,11 @@ function DeleteInactiveIcon(props) {
         width="10"
         height="10"
         fill="#FFF"
-        stroke="#579CD8"
+        stroke="#f62913"
         strokeWidth="2"
       />
-      <path d="M3 6H17" stroke="#579CD8" strokeWidth="2" />
-      <path d="M8 6V4H12V6" stroke="#579CD8" strokeWidth="2" />
+      <path d="M3 6H17" stroke="#f62913" strokeWidth="2" />
+      <path d="M8 6V4H12V6" stroke="#f62913" strokeWidth="2" />
     </svg>
   )
 }
@@ -239,12 +239,12 @@ function DeleteActiveIcon(props) {
         y="6"
         width="10"
         height="10"
-        fill="#0369A1"
-        stroke="#92D2FF"
+        fill="#d90301"
+        stroke="#ffdfd4"
         strokeWidth="2"
       />
-      <path d="M3 6H17" stroke="#92D2FF" strokeWidth="2" />
-      <path d="M8 6V4H12V6" stroke="#92D2FF" strokeWidth="2" />
+      <path d="M3 6H17" stroke="#ffdfd4" strokeWidth="2" />
+      <path d="M8 6V4H12V6" stroke="#ffdfd4" strokeWidth="2" />
     </svg>
   )
 }
