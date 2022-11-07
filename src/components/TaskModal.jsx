@@ -41,7 +41,7 @@ export default function TaskModal({ note, onChange, onSave, onClose, visible }) 
             method="dialog"
             className=''
           >
-            <div className='px-8 pt-4 pb-7 bg-sky-100 border-0 z-[999999] min-w-[500px]'>
+            <div className='px-8 pt-4 pb-7 bg-slate-100 border-0 z-[999999] min-w-[500px]'>
               <div className='flex justify-start items-center gap-2'>
                 <label htmlFor='color'>Color: </label>
                 <input type="color" id='color' value={color} onChange={handleColor} className='appearance-none border-none bg-transparent input-color'  />
