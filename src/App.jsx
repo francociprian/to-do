@@ -1,18 +1,28 @@
 import React, { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import TasksList from './components/TasksList';
-import DateToDay from './common/DateToDay';
 import { AiOutlinePlusCircle, AiFillBell } from 'react-icons/ai';
 
 
 function ModalNavBar() {
+
+  function RandomLetters(num) {
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const charactersLength = characters.length;
+    let result = "";
+    for (let i = 0; i < num; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  }
+
   return (
     <div>
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center text-sm font-medium text-white">
             <li className='h-6 w-6 rounded-full bg-white text-black border-black flex justify-center items-center'>
-              <span className=''>f</span>
+              <span className=''>{RandomLetters(1)}</span>
             </li>
           </Menu.Button>
         </div>
@@ -71,7 +81,6 @@ function App() {
       <NavBar />
       <div className='mx-auto max-w-4xl'>
         <div>
-          {/* <DateToDay /> */}
           <TasksList />
         </div>
       </div>
