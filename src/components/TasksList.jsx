@@ -104,9 +104,11 @@ export default function TasksList() {
       <div className='px-4 flex justify-between items-center'>
         <DateToDay />
         <button
-          className='text-sm py-1 px-2 my-2 flex items-center outline outline-[1.89px] outline-sky-600 hover:outline-sky-900 rounded-3xl'
+          className='border group flex w-[10rem] items-center rounded-md px-2 py-1 text-sm hover:border-sky-900'
           onClick={() => setDraft(true)}
-        > Add Task<AiOutlinePlusCircle className='ml-2' />
+        >
+          <AiOutlinePlusCircle className="mr-2 h-4 w-4" />
+          Add Task
         </button>
       </div>
       {draft && (
